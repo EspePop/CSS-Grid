@@ -1,0 +1,44 @@
+.contenedor {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.contenedor .item {
+    background: #ff8000;
+    /* POSICIONAMIENTO */
+    /* Incicamos dónde queremos que comience nuestra columna -> en la línea n
+    grid-column-start: 1;
+    */
+    /* Incicamos dónde queremos que comience nuestra columna -> en la línea n (así le cambiamos el tamaño)
+    grid-column-end: 4;
+    */
+    /* Lo mismo con las filas 
+    grid-row-start: 2;
+    grid-row-end: 3;
+    */
+    /* Se puede poner los valores start/end tando de las columnas como de las filas en una sola línea:
+    grid-column: 1 / 4;
+    grid-row: 2 / 3; 
+     */
+    /* Y Todo se puede hacer con una sóla propiedad start/end -> fila/columna:
+       * Primer parámetro: grid-row-start
+       * Segundo parámetro: grid-colum-start
+       * Tercer parámetro: grid-row-end
+       * Cuarto parámetro: grid-colum-end
+
+    grid-area: 2 / 1 / 4 / 3 ;
+    
+    */
+    /* Podemos jugar con los valores; 
+     * los nros en negativo quieren decir que van de la linea inical 
+     * a la linea de la fila/columa explicita 
+     
+    */
+    /* CAMBIAR TAMAÑO */
+    /* TEnemos una propiedad span -> "estira" nuestas filas y columnas */
+    /* Cominza en la lína 1 (no hace falta ponerlo) y termina e la 3*/
+    grid-column: span 3;
+    grid-row: 3 / span 2;
+}

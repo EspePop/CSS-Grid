@@ -1,0 +1,13 @@
+.contenedor{
+    display: grid;
+    grid-gap: 20px;
+
+    /* Para hacer responsive nuestros elementos podemos usar -> auto-fi/fill;
+       cuando reduzcamos la pantalla, en el momento que no quepan las columnas se irán poniendo debajo */
+    /* -fit -> rellena todo el contenedor con las columnas disponibles*/
+    /* -fill -> rellena odo el contenedor con las columnas que quepan en el elemento, 
+    incluso añadiendo columnas implícitas*/
+    
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* Aquí también podemos usar la funcion minmax() para indicar el tamaño min/max que ocupa cada columna */
+}

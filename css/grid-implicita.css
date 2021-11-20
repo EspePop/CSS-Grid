@@ -1,0 +1,43 @@
+.contenedor {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 200px 100px 200px;
+
+
+/* Cuando nuestra grid no abarca todos los elementos de nuestro html, 
+    "acomoda" los elementos restantes "como ella quiere", eso es la grid implícita */
+
+    /* Tenemos la propiedad grid-auto- -> nos permite modificar el tamaño */
+    grid-auto-columns: 100px;
+    grid-auto-rows: 100px;
+    /* flow -> el tamaño que le vamos poniendo a nuestros elementos*/
+    /* cada elemento extra se añadirá a la derecha con -flow: column */
+    /* cada elemento extra se añadirá debajo con -flow: row (valor por defecto)*/    
+    /* Al usar un grid con grid-implícita, se quedan espacios en blanco, 
+    para rellenar la rejilla con el resto de elementos usamos -flow: dense*/
+    grid-auto-flow: dense; 
+}
+
+.contenedor .span2{
+    /* Ocupa 2 columnas */
+    grid-column: span 2;
+    background: #ff8000;
+}
+
+.contenedor .span3{
+    /* Ocupa 3 columnas */
+    grid-column: span 3;
+    background: #575757;
+}
+
+/* NOTA: si usamos en .contenedor: 
+    grid-auto-flow: column dense; 
+    
+    debemos usar en el estilo de los elementos .contenedor .span2/3:
+    grid-row: span 2; 
+
+    Como el flow de columnas no se ajustará al ancho porque max-width: 1000px;
+    Para que se ajuste al ancho: grid-auto-flow: column dense; 
+    Pero no se aconseja...
+*/

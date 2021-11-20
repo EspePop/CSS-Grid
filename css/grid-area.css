@@ -1,0 +1,48 @@
+.contenedor {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    /* Enscribiremos entre comillas los nombre de las secciones
+     * de nuestra web e indicaremos su estructura, esto nos ayudará 
+     * en un diseño responsive.
+    */
+    grid-template-areas: 
+        /* "header        header       header"  */
+        "sidebar-1     contenido    contenido" 
+        "sidebar-1     widgets      widgets"
+        /* "footer        footer       footer"; */
+}
+
+.contenedor .header {
+    background: #ff8000;
+    /* Como hemos especificado un area; en vez de usar nros, 
+     * indicamos start/end con la "etiqueta" de area: */
+    grid-area: header; 
+}
+
+.contenedor .sidebar-1{
+    background: #393c46;
+    grid-area: sidebar-1;
+}
+
+.contenedor .contenido{
+    background: #fff;
+    color: #000;
+    grid-area: contenido;
+}
+
+.contenedor .widgets{
+    background: #ff8000;
+    grid-area: widgets;
+}
+
+/* .contenedor .sidebar-2{
+    background: #393c46;
+    grid-area: sidebar-2;
+}
+
+.contenedor .footer{
+    background: #222831;
+    grid-area: footer;
+} */

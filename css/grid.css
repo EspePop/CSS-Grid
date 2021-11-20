@@ -1,0 +1,9 @@
+.contenedor {
+    display: grid;
+    /* Nro de columnas (ancho): fr -> divide el espacio en fracciones */
+    grid-template-columns: 1fr 2fr 1fr;
+    /* Nro de filas (alto)*/
+    grid-template-rows: 150px 300px;
+    /* ESpaciado entre elementos */
+    grid-gap: 20px;
+}

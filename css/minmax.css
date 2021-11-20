@@ -1,0 +1,10 @@
+.contenedor {
+    display: grid;
+    grid-gap: 20px;
+    /* Con la funcion minmax(min, max) indicamos el minimo 
+     * y maximo que tendrá la columna */
+    grid-template-columns: minmax(300px, 1fr) 1fr;
+    /* Hacemos lo mismo con las filas, esta vez 
+     * indicamos auto para que el max se ajuste al contenido*/
+    grid-template-rows: minmax(100px, auto) 400px;
+}
